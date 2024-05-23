@@ -22,7 +22,7 @@
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                   <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
            </button>
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <!-- Left Side Of Navbar -->
@@ -49,10 +49,14 @@
                        @canany(['create-user', 'edit-user', 'delete-user'])
                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                        @endcanany
-                       @canany(['create-mahasiswa', 'edit-mahasiswa','delete-mahasiswa'])
+                       @canany(['create-mahasiswa', 'edit-mahasiswa', 'delete-mahasiswa'])
                            <li><a class="nav-link" href="{{ route('mahasiswa.index') }}">Manage
                                    Mahasiswa</a></li>
                        @endcanany
+                           @canany(['create-permission', 'edit-permission', 'delete-permission'])
+                               <li><a class="nav-link" href="{{ route('permission.index') }}">Manage
+                                       Permissions</a></li>
+                           @endcanany
                        <li class="nav-item dropdown">
                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -73,7 +77,7 @@
                </ul>
            </div>
        </div>
-       </nav>
+   </nav>
    <main class="py-4">
        <div class="container">
            <div class="row justify-content-center mt-3">
@@ -113,3 +117,4 @@
 </script>
 </body>
 </html>
+
